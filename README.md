@@ -6,7 +6,7 @@
 
 | 目录 | 插件 | 功能 | 构建要求 | IDEA 平台范围 |
 | --- | --- | --- | --- | --- |
-| [anno-highlighter](anno-highlighter/) | OMS Dubbo Usage Highlighter | 识别 `@OmsDubboService`、`@OmsDubboReference` 及其组合注解，避免相关 Java 类和字段被误报为未使用 | JDK 17、Maven | `233` 至 `253.*` |
+| [anno-highlighter](anno-highlighter/) | OMS Dubbo Usage Highlighter | 支持自定义组合注解及多级元注解识别，避免相关 Java 类和字段被误报为未使用 | JDK 17、Maven | `233` 至 `253.*` |
 | [jeoms-tcc-plugin](jeoms-tcc-plugin/README.md) | JEOMS TCC Navigation | TCC 模板方法与 `doPrepare`、`doCommit`、`doRollback` 之间的导航及反向用法查找 | JDK 25、Gradle Wrapper | `262` 起，未设置上限 |
 
 兼容范围来自各插件配置，不代表已在所有版本完成验证。
@@ -14,6 +14,8 @@
 ## 构建
 
 ### OMS Dubbo Usage Highlighter
+
+支持自定义组合注解：在自定义注解上标记 `@OmsDubboService`、`@OmsDubboReference`，或通过多级元注解间接关联，插件即可识别使用该自定义注解的 Java 类和字段。当前识别入口为这两个注解，不提供任意目标注解的设置页面。
 
 使用 JDK 17，在仓库根目录执行：
 
