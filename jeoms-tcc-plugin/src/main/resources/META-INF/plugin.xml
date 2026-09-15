@@ -1,0 +1,18 @@
+<idea-plugin>
+    <id>com.greatonce.oms.tcc.navigation</id>
+    <name>JEOMS TCC Navigation</name>
+    <vendor>GreatOnce</vendor>
+    <description><![CDATA[
+        Navigate from Java calls to inherited JEOMS TCC prepare commit and rollback
+        methods to their corresponding do method implementations
+    ]]></description>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <gotoDeclarationHandler implementation="com.greatonce.oms.idea.tcc.TccGotoDeclarationHandler"/>
+        <findUsagesHandlerFactory implementation="com.greatonce.oms.idea.tcc.TccFindUsagesHandlerFactory" order="first"/>
+    </extensions>
+    <actions>
+        <action id="GotoImplementation" class="com.greatonce.oms.idea.tcc.TccGotoImplementationAction" overrides="true"/>
+    </actions>
+</idea-plugin>

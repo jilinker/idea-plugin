@@ -1,0 +1,24 @@
+<idea-plugin modify-markers="true">
+    <id>com.idea.plugin.oms-dubbo-usage-highlighter</id>
+    <name>OMS Dubbo Usage Highlighter</name>
+    <version>1.0.0</version>
+    <vendor email="dev@oms.local" url="https://oms.local">OMS Platform</vendor>
+    <idea-version since-build="233" until-build="253.*"/>
+    <description><![CDATA[
+        <p>统一识别带有 @OmsDubboService、@OmsDubboReference 及其糖注解的 Java 字段/类，防止被 IDEA 标记为未使用。</p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <ul>
+            <li>1.0.0：首次发布，提供隐式使用识别能力。</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <implicitUsageProvider implementation="com.idea.plugin.oms.dubbo.highlighter.OmsDubboImplicitUsageProvider"/>
+    </extensions>
+    <actions/>
+</idea-plugin>

@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+._*
+
+# IDE metadata
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Build output and caches
+target/
+build/
+out/
+.gradle/
+.intellijPlatform/
+
+# Local agent state
+.codex/
+.serena/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+local.properties
+settings.xml
+settings-liby.xml
+*.jks
+*.keystore
+*.pem
+*.key
+
+# Logs
+*.log
