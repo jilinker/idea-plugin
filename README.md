@@ -21,10 +21,10 @@
 
 ```sh
 cd anno-highlighter
-mvn -s ~/.m2/settings-liby.xml test package
+mvn test package
 ```
 
-该项目当前没有 Maven Wrapper。需要预先在本机配置 `~/.m2/settings-liby.xml`，不要将仓库凭据提交到 Git。
+该项目当前没有 Maven Wrapper，使用本机安装的 Maven。
 
 安装包：`anno-highlighter/target/oms-dubbo-usage-highlighter-1.0.0-SNAPSHOT.zip`。
 
